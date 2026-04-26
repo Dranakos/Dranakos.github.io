@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>the mk legacy</title>
+    <title>The MK Legacy</title>
+    <link rel="icon"  type="image/x-icon" href="https://github.com/Dranakos/Dranakos.github.io/blob/main/minilogo.png?raw=true" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta property="og:title" content="the mk legacy" />
@@ -18,8 +19,9 @@
 
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="627" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        
         @import url(https://db.onlinewebfonts.com/c/4474be77c8de11165f325afd6393de32?family=Veteran+Typewriter);
         body {
             background-color: #040404;
@@ -49,12 +51,12 @@
         list-style-type: none;
         line-height: 1;
         display: flex;
-        margin: auto;
+        margin: 0vh auto;
         padding: 0%;
-        justify-content:space-around;
+        width: 100%;
+        justify-content:space-evenly;
         align-items: center;
         font-family: 'Veteran Typewriter', sans-serif;
-        width: 90%;
         float: none;
        }
        a {
@@ -64,50 +66,97 @@
         .container {
             position: relative;
             width: 100%;
+            overflow: hidden;
         }
+        
 
         .image {
             width: 100%;
             height: 100%;
-            object-fit: fill;
-            opacity: 0.7;
+            opacity: 1;
+            margin: -52vh 0vw 0vh 0vw;
+            scale: 0.8;
+            
         }
 
         .text {
             position: absolute;
             width: 100%;
-            margin: auto;
             line-height: 1;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
-            top: 10%;
+            top: 23%;
+            z-index: 101;
+            
         }
         #navbar {
-            position: sticky;
+            position: fixed;
             top: 0;
             overflow: hidden;
-            background-color: #040404;
-            z-index: 1;
-            transition: 0.5s ease-in-out;
-            transition-delay: 2.5s;
+            background-color: transparent;
+            z-index: 102;
+            width: 100%;
+            max-width: 100%;
+            transition: 0.5s ease;
+            transition-delay: 0s;
+
         }
         #navbar ul {
-            float: left;
             color: #d3d2b3;
-            text-align: center;
-            padding: 1.2vw;
+            padding: 2vh 0vw;
             text-decoration: none;
 
+        }
+        #navbar ul li:hover {
+            transition: transform 0.3s;
+            transform: scale(1.07);
+        }
+        .fade {
+            width: 100%;
+            position: absolute;
+            display: flex;
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+            top: -15%;
+            padding: 50vh 0vw;
+            background: radial-gradient(circle, rgba(0.4, 0.4, 0.4, 0.6),  rgba(0.4,0.4,0.4,0.2), rgba(0.4,0.4,0.4,0));
+            overflow: hidden;
+
+        }
+        .fade-text {
+            opacity: 0;
+        }
+        footer {
+            background-color: #040404;
+            
+        }
+        footer ul {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+            gap: 1vw;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+            background-color: #040404;
+            padding: 1.2vh;
+        }
+        .foot-container {
+            margin: 5vh auto;
+            width: 20vw;
+            padding: 5vh;
         }
     </style>
     
 </head>
 <body>
     <div id="navbar">
-        <ul style="font-size: 2.5vw;">
-            <li style="color: #d3d2b3"><a href="/tickets">Get your tickets</a></li> 
-            <li style="color: #d3d2b3;"><a href="/">the mk legacy</a></li>
+        <ul style="font-size: 1.5vw;">
+            <li style="color: #d3d2b3"><a href="/tickets">Conserts</a></li> 
+            <li style="color: #d3d2b3;"><a href="/">The MK Legacy</a></li>
             <li style="color: #d3d2b3"><a href="/about">About us</a></li>
         </ul>
     </div>
@@ -115,19 +164,23 @@
         <img class="image" ba src="https://github.com/Dranakos/Dranakos.github.io/blob/main/IMG_2123.jpg?raw=true"
         >
         <div class="text">
-            <h1> the mk legacy</h1>
+            <h1 style="font-size: 5.5vw;"> The MK Legacy</h1>
         </div>
-        <div style="position: absolute; width: 100%; display: flex; align-items: center; justify-content: space-evenly; top: 21%; font-size: 3.5vw;">
-            <p> a tribute consert</p>
+        <div style="position: absolute; width: 100%; display: flex; align-items: center; justify-content: space-evenly; top: 35%;">
+            <p style="font-size: 1.7vw; z-index: 101;"> a Mark Knopfler tribute band</p>
         </div>
-        <div style="position: absolute; width: 100%; display: flex; align-items: center; justify-content: space-evenly; top: 37%; font-size: 2.2vw;">
-            <p> 11. oktober 2025, kl. 19.00</p>
+        <div class="fade">
+            <h1 class="fade-text">irjdgrggirie</h1>
         </div>
     </div>
     <footer>
-        <h2 style="font-size: 3.2vw;">Kontakt Oss</h2>
-        <a style="color: rgb(138, 138, 194); font-size: 1.6vw;" href="https://www.facebook.com/profile.php?id=61574513770408" target="_blank">Facebook |</a>
-        <a style="color: rgb(138, 138, 194); font-size: 1.6vw;" href="https://www.instagram.com/mklegacy_/" target="_blank">Instagram</a>
+        <div class="foot-container">
+            <ul>
+                <li><a style="font-size: 1.3vw;" href="https://www.facebook.com/profile.php?id=61574513770408" class="fab fa-facebook"></a></li>
+                <li><a style="font-size: 1.3vw;" href="https://www.instagram.com/mklegacy_/" class="fab fa-instagram"></a></li>
+                <li><a style="font-size: 1.3vw" href="https://www.youtube.com/embed/i-dw1dnXHUI?si=5Ghl0gzJvlgbJ27C" class="fab fa-youtube"></a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>
