@@ -24,7 +24,7 @@
         
         @import url(https://db.onlinewebfonts.com/c/4474be77c8de11165f325afd6393de32?family=Veteran+Typewriter);
         body {
-            background-color: #040404;
+            background-color:#d3d2b3;
         }
         h1 {
             color:#d3d2b3;
@@ -56,27 +56,39 @@
         width: 100%;
         justify-content:space-evenly;
         align-items: center;
-        font-family: 'Veteran Typewriter', sans-serif;
+        font-family: 'Inria Serif';
         float: none;
        }
        a {
         color: #d3d2b3;
         text-decoration: none;
        }
-        .container {
+
+
+        @media (prefers-reduced-motion: no-preference){
+            .container {
             position: relative;
             width: 100%;
             overflow: hidden;
-        }
-        
+            background-color:#040404;
+            animation: fade-in linear forwards;
+            animation-timeline: view();
+            animation-range: 10% 25%;
+            opacity: 0;
+            }
 
+            @keyframes fade-in {
+                to {
+                opacity: 1;
+                scale: 1;
+                }
+            }
+        }
         .image {
-            width: 100%;
-            height: 100%;
-            opacity: 1;
-            margin: -25.8vw 0vw 0vh 0vw;
-            scale: 0.8;
-            
+                width: 100%;
+                height: 100%;
+                margin: 0vw 0vw 0vh 0vw;
+                scale: 1;
         }
 
         .text {
@@ -86,7 +98,7 @@
             display: flex;
             align-items: center;
             justify-content: space-evenly;
-            top: 23%;
+            top: 43%;
             z-index: 101;
         
         }
@@ -106,8 +118,9 @@
             }
             #navbar ul {
                 color: #d3d2b3;
-                padding: 2vh 0vw;
+                padding: 0vh 0vw;
                 text-decoration: none;
+                font-size: 1.5vw;
 
             }
             #navbar ul li:hover {
@@ -119,29 +132,51 @@
                 display: none;
             }
 
-            .header-item-left {
-                display: none;
-            }
             #headervideo-container {
                 height: 100vh;
             }
+
+            .mklegacy_logo {
+                scale: 0.4;
+            }
         }
-        .fade {
-            width: 100%;
-            position: absolute;
+
+        @media only screen and (max-width: 1023px){
+            #mobile-header {
             display: flex;
-            z-index: 100;
-            justify-content: center;
-            align-items: center;
-            top: -15%;
-            padding: 50vh 0vw;
-            background: radial-gradient(circle, rgba(0.4, 0.4, 0.4, 0.6),  rgba(0.4,0.4,0.4,0.2), rgba(0.4,0.4,0.4,0));
+            position: fixed;
+            justify-content: space-between;
+            padding: 0vh 0vw 0vh 0vw;
+            z-index: 10000;
+            width: 100%;
+            max-width: 100%;
+            align-items:center;
+            top: 0;
+            background-color: transparent;
+            transition: .5s ease-in-out;
             overflow: hidden;
+            height: 10vh;
+            }
+            
+            .mklegacy_logo_left {
+                width: 30vw;
+                padding: 2vw 2vw;
+            }
+            .mklegacy_logo_right {
+                width: 30vw;
+            }
+            
+
+            #navbar{
+                display: none;
+            }
+
+            #headervideo-container {
+                height: 80vh;
+            }
 
         }
-        .fade-text {
-            opacity: 0;
-        }
+        
         footer {
             background-color: #040404;
             
@@ -164,27 +199,6 @@
             padding: 5vh;
         }
 
-        @media only screen and (max-width: 1023px){
-            #mobile-header {
-            display: flex;
-            font-size: 25px;
-            justify-content: space-between;
-            position: fixed;
-            padding: 3vw 3vw;
-            z-index: 1000000;
-            width: 100%;
-            align-items: center;
-            top: 0;
-            background-color: transparent;
-            transition: .5s ease-in-out;
-            }
-            #navbar{
-                display: none;
-            }
-            #headervideo-container {
-                height: 80vh;
-            }
-        }
         #headervideo {
             display: absolute;
             width: 100%;
@@ -196,8 +210,28 @@
         #headervideo-container {
             display: flex; 
             position: relative;
-            justify-content: 
-            center; margin: 0;
+            justify-content: center;
+            margin: 0;
+        }
+        .headervideo-text {
+            display: flex;
+            position: absolute;
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            top: 26vh;
+            font-family: 'Inria Serif';
+            font-size: 5vw;
+        }
+        .headervideo-text-p {
+            display: flex;
+            position: absolute;
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            top: 69vh;
+            font-family: 'Inria Serif';
+            font-size: 2vw;
         }
     </style>
 </head>
@@ -206,30 +240,38 @@
         <video id="headervideo" preload="auto" autoplay muted loop playsinline>
             <source src="https://github.com/Dranakos/Dranakos.github.io/raw/refs/heads/main/Website%20video%201.mp4">
         </video>
+        <div class="headervideo-text">
+            <h2>AN EVENING <br> IN OCTOBER</h2>
+        </div>
+        <div class="headervideo-text-p">
+            <p>a tribute to mark knophler in concert</p>
+        </div>
     </div>
     <div id="navbar">
-        <ul style="font-size: 1.5vw;">
-            <li style="color: #d3d2b3"><a href="/tickets">Conserts</a></li> 
-            <li style="color: #d3d2b3;"><a href="/">The MK Legacy</a></li>
-            <li style="color: #d3d2b3"><a href="/about">About us</a></li>
+        <ul>
+            <li style="color: #d3d2b3"><a href="/tickets">SIGN UP</a></li>
+            <li style="color: #d3d2b3"><a href="/tickets">TICKETS</a></li> 
+            <li ><a href="/"> <img class="mklegacy_logo" src="https://github.com/Dranakos/Dranakos.github.io/blob/main/Logo%20kremhvit%20small.png?raw=true" alt="mklegacy logo" > </a></li>
+            <li style="color: #d3d2b3"><a href="/about">DATES</a></li>
+            <li style="color: #d3d2b3"><a href="/about">THE BAND</a></li>
         </ul>
     </div>
-    <div id="mobile-header">
-        <div class="header-item-left">
-            <p>The MK Legacy</p>
+    <div id="mobile-header"> 
+        <div id="mibile-header-left">
+            <img style="scale: 1;" class="mklegacy_logo_left" src="https://github.com/Dranakos/Dranakos.github.io/blob/main/Logo%20kremhvit%20small.png?raw=true" alt="mklegacy logo phone menu" > 
+        </div>
+        <div id="mobile-header-right">
+            <img style="scale: 0.2;" class="mklegacy_logo_right" src="https://github.com/Dranakos/Dranakos.github.io/blob/main/Meny%20ikon.png?raw=true" alt="mklegacy logo" >
         </div>
     </div>
     <div class="container">
-        <img class="image" ba src="https://github.com/Dranakos/Dranakos.github.io/blob/main/IMG_2123.jpg?raw=true"
+        <img class="image" src="https://github.com/Dranakos/Dranakos.github.io/blob/main/IMG_2123.jpg?raw=true"
         >
         <div class="text">
             <h1 style="font-size: 5.5vw;"> The MK Legacy</h1>
         </div>
-        <div style="position: absolute; width: 100%; display: flex; align-items: center; justify-content: space-evenly; top: 35%;">
+        <div style="position: absolute; width: 100%; display: flex; align-items: center; justify-content: space-evenly; top: 51.5%;">
             <p style="font-size: 1.7vw; z-index: 101;"> a Mark Knopfler tribute band</p>
-        </div>
-        <div class="fade">
-            <h2 class="fade-text">irjdgrggirie</h2>
         </div>
     </div>
     <footer>
