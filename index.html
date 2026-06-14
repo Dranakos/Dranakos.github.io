@@ -17,14 +17,23 @@
 
     <meta property="og:url" content="https://mklegacy.no/" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="627" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         
         @import url(https://db.onlinewebfonts.com/c/4474be77c8de11165f325afd6393de32?family=Veteran+Typewriter);
+        
         body {
-            background-color:#d3d2b3;
+            background-color:#040404;
         }
         h1 {
             color:#d3d2b3;
@@ -88,7 +97,8 @@
                 width: 100%;
                 height: 100%;
                 margin: 0vw 0vw 0vh 0vw;
-                scale: 1;
+                object-fit: cover;
+                object-position: center;
         }
 
         .text {
@@ -139,6 +149,14 @@
             .mklegacy_logo {
                 scale: 0.4;
             }
+            #headervideo-h2 {
+                font-size: 5vw;
+                line-height: 15vh;
+            }
+            #headervideo-p {
+            font-size: 1.55vw;
+            margin: 0;
+            }
         }
 
         @media only screen and (max-width: 1023px){
@@ -155,7 +173,7 @@
             background-color: transparent;
             transition: .5s ease-in-out;
             overflow: hidden;
-            height: 10vh;
+            height: 20vh;
             }
             
             .mklegacy_logo_left {
@@ -173,6 +191,20 @@
 
             #headervideo-container {
                 height: 80vh;
+            }
+
+            .container {
+                height: 100vh;
+            }
+            #headervideo-h2 {
+                font-size: 10vw;
+                line-height: 12vh;
+            }
+            #headervideo-p {
+            font-size: 3vw;
+            }
+            .image {
+                scale: 1.3;
             }
 
         }
@@ -213,26 +245,98 @@
             justify-content: center;
             margin: 0;
         }
-        .headervideo-text {
-            display: flex;
-            position: absolute;
-            z-index: 10000;
-            justify-content: center;
-            align-items: center;
-            top: 26vh;
-            font-family: 'Inria Serif';
-            font-size: 5vw;
+        
+        .headervideo-list {
+            display: flex; 
+            position: absolute; 
+            text-align: center;
+            text-decoration: none; 
+            flex-direction: column;
+            top: 39%;
+            margin: 0;
         }
-        .headervideo-text-p {
-            display: flex;
-            position: absolute;
-            z-index: 10000;
-            justify-content: center;
-            align-items: center;
-            top: 69vh;
+        #headervideo-h2 {
+            
             font-family: 'Inria Serif';
+            margin: 0vh;
+            padding: 0vh;
+            
+         }
+        #headervideo-p {
+            font-family: 'raleway';
+         }
+
+        .parallax {
+        perspective: 150vh;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: cover;
+        font-size: 200%;
+        }
+        .parallax__layer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        }
+        .parallax_group_1 {
+            position: relative;
+            transform-style: preserve-3d;
+            height: 170vh;
+            transition: 0.5s;
+        }
+
+        .parallax__layer--base {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        z-index: 4;
+        }
+
+        .parallax__layer--back {
+        background: #040404;
+        -webkit-transform: translateZ(-300vh) scale(1);
+        transform: translateZ(-300vh) scale(3.1);
+        z-index: 3;
+        background-attachment: scroll;
+        background-clip: border-box;
+        background-repeat: repeat;
+        width: 100%;
+        height: 170vh;
+        }
+    
+        .group_1_title {
+            position: relative;
+            
+            height: 100%;
+            width: 100%;
+        }
+        
+        #textbox_1 {
+            height: 60vh;
+            width: 30vw;
+            background-color: #3D3D2E;
+            margin: auto;
+            opacity: 0.9;
+        }
+        #textbox_1_h2 {
+            width: 100%;
+            text-align: center;
+            font-family: 'Inria serif';
+            margin: 5vh 3vh 0 0;
+            padding: 6vh 0 0 0;
             font-size: 2vw;
         }
+        #textbox_1_p {
+            width: 100%;
+            text-align: left;
+            font-family: 'Raleway';
+            margin: 9vh 5.3vw;
+            padding: 6vh 0 0 0;
+            font-size: 1.5vw;
+            line-height: 4vh;
+        }
+
     </style>
 </head>
 <body style="width: 100%; height: 100%; margin: 0;">
@@ -240,12 +344,10 @@
         <video id="headervideo" preload="auto" autoplay muted loop playsinline>
             <source src="https://github.com/Dranakos/Dranakos.github.io/raw/refs/heads/main/Website%20video%201.mp4">
         </video>
-        <div class="headervideo-text">
-            <h2>AN EVENING <br> IN OCTOBER</h2>
-        </div>
-        <div class="headervideo-text-p">
-            <p>a tribute to mark knopfler in concert</p>
-        </div>
+        <ul class="headervideo-list" >
+            <li><h2 id="headervideo-h2">AN EVENING <br> IN OCTOBER</h2></li>
+            <li><p id="headervideo-p">a tribute to mark knopfler in concert</p></li>
+        </ul>
     </div>
     <div id="navbar">
         <ul>
@@ -258,13 +360,13 @@
     </div>
     <div id="mobile-header"> 
         <div id="mibile-header-left">
-            <img style="scale: 1;" class="mklegacy_logo_left" src="https://github.com/Dranakos/Dranakos.github.io/blob/main/Logo%20kremhvit%20small.png?raw=true" alt="mklegacy logo phone menu" > 
+            <a href="/"><img style="scale: 1;" class="mklegacy_logo_left" src="https://github.com/Dranakos/Dranakos.github.io/blob/main/Logo%20kremhvit%20small.png?raw=true" alt="mklegacy logo phone menu" > </a>
         </div>
         <div id="mobile-header-right">
             <img style="scale: 0.2;" class="mklegacy_logo_right" src="https://github.com/Dranakos/Dranakos.github.io/blob/main/Meny%20ikon.png?raw=true" alt="mklegacy logo" >
         </div>
     </div>
-    <div class="container">
+    <!--<div class="container">
         <img class="image" src="https://github.com/Dranakos/Dranakos.github.io/blob/main/IMG_2123.jpg?raw=true"
         >
         <div class="text">
@@ -272,6 +374,25 @@
         </div>
         <div style="position: absolute; width: 100%; display: flex; align-items: center; justify-content: space-evenly; top: 51.5%;">
             <p style="font-size: 1.7vw; z-index: 101;"> a Mark Knopfler tribute band</p>
+        </div>
+    </div>-->
+    <div class="parallax">
+        <div class="parallax_group_1">
+            <div class="parallax__layer parallax__layer--back">
+                <img class="image" src="https://github.com/Dranakos/Dranakos.github.io/blob/main/IMG_2123.jpg?raw=true">     
+            </div>
+            <div class="parallax__layer parallax__layer--base">
+                <div class="group_1_title">
+                    <!--<img class="Ash-textbox" src="https://raw.githubusercontent.com/Dranakos/Dranakos.github.io/04da6bffe42a6ac12925b05bd30636f4602028f4/Ash%20tekstboks.png">
+                    <img class="kremhvit_rl" src="https://github.com/Dranakos/Dranakos.github.io/blob/main/Kremhvit%20RL%20tittelboks.png?raw=true">
+                    <p id="textbox-p" style="display: flex; position: absolute;">UPCOMING CONCERTS</p>
+                    <p id="textbox-raleway">Unfortunatly, there are <br> no shows listed at this <br> moment...</p>-->
+                    <div id="textbox_1">
+                        <h2 id="textbox_1_h2" >UPCOMING CONCERTS</h2>
+                        <p id="textbox_1_p">New consert dates <br> coming soon</p>
+                    </div>
+                </div>  
+            </div>
         </div>
     </div>
     <footer>
