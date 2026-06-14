@@ -155,16 +155,120 @@
             align-items: center;
             justify-content: center;
         }
+        @media only screen and (min-width: 1023px){
+            #navbar {
+                position: fixed;
+                top: 0;
+                overflow: hidden;
+                background-color: transparent;
+                z-index: 102;
+                width: 100%;
+                max-width: 100%;
+                transition: 0.5s ease;
+                transition-delay: 0s;
+
+            }
+            #navbar ul {
+                color: #d3d2b3;
+                padding: 0vh 0vw;
+                text-decoration: none;
+                font-size: 1.5vw;
+
+            }
+            #navbar ul li:hover {
+                transition: transform 0.3s;
+                transform: scale(1.07);
+            }
+
+            #mobile-header {
+                display: none;
+            }
+
+            #headervideo-container {
+                height: 100vh;
+            }
+
+            .mklegacy_logo {
+                scale: 0.4;
+            }
+            #headervideo-h2 {
+                font-size: 5vw;
+                line-height: 15vh;
+            }
+            #headervideo-p {
+            font-size: 1.55vw;
+            margin: 0;
+            }
+        }
+
+        @media only screen and (max-width: 1023px){
+            #mobile-header {
+            display: flex;
+            position: fixed;
+            justify-content: space-between;
+            padding: 0vh 0vw 0vh 0vw;
+            z-index: 10000;
+            width: 100%;
+            max-width: 100%;
+            align-items:center;
+            top: 0;
+            background-color: transparent;
+            transition: .5s ease-in-out;
+            overflow: hidden;
+            height: 20vh;
+            }
+            
+            .mklegacy_logo_left {
+                width: 30vw;
+                padding: 2vw 2vw;
+            }
+            .mklegacy_logo_right {
+                width: 30vw;
+            }
+            
+
+            #navbar{
+                display: none;
+            }
+
+            #headervideo-container {
+                height: 80vh;
+            }
+
+            .container {
+                height: 100vh;
+            }
+            #headervideo-h2 {
+                font-size: 10vw;
+                line-height: 12vh;
+            }
+            #headervideo-p {
+            font-size: 3vw;
+            }
+            .image {
+                scale: 1.3;
+            }
+        }
     </style>
     
 </head>
 <body>
     <div id="navbar">
-        <ul style="font-size: 1.5vw;">
-            <li style="color: #d3d2b3"><a href="/tickets">Conserts</a></li> 
-            <li style="color: #d3d2b3;"><a href="/">The MK Legacy</a></li>
-            <li style="color: #d3d2b3"><a href="/about">About us</a></li>
+        <ul>
+            <li style="color: #d3d2b3"><a href="/tickets">SIGN UP</a></li>
+            <li style="color: #d3d2b3"><a href="/tickets">TICKETS</a></li> 
+            <li ><a href="/"> <img class="mklegacy_logo" src="https://github.com/Dranakos/Dranakos.github.io/blob/main/Logo%20kremhvit%20small.png?raw=true" alt="mklegacy logo" > </a></li>
+            <li style="color: #d3d2b3"><a href="/about">DATES</a></li>
+            <li style="color: #d3d2b3"><a href="/about">THE BAND</a></li>
         </ul>
+    </div>
+    <div id="mobile-header"> 
+        <div id="mibile-header-left">
+            <a href="/"><img style="scale: 1;" class="mklegacy_logo_left" src="https://github.com/Dranakos/Dranakos.github.io/blob/main/Logo%20kremhvit%20small.png?raw=true" alt="mklegacy logo phone menu" > </a>
+        </div>
+        <div id="mobile-header-right">
+            <img style="scale: 0.2;" class="mklegacy_logo_right" src="https://github.com/Dranakos/Dranakos.github.io/blob/main/Meny%20ikon.png?raw=true" alt="mklegacy logo" >
+        </div>
     </div>
     <div class="container">
         <img class="image" ba src="https://github.com/Dranakos/Dranakos.github.io/blob/main/IMG_2123.jpg?raw=true"
@@ -178,16 +282,15 @@
         <div class="fade">
             <h1 class="fade-text">irjdgrggirie</h1>
         </div>
-        <div class="yt-video"> 
-            <iframe  width="700" height="500" src="https://www.youtube.com/embed/i-dw1dnXHUI?si=5Ghl0gzJvlgbJ27C" frameborder="0" allowfullscreen></iframe>
-        </div>
+        <div class="yt-video">
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/T1ybYX_hHEg?si=d9w5m0QCKxUgiKUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <footer>
         <div class="foot-container">
             <ul>
                 <li><a style="font-size: 1.3vw;" href="https://www.facebook.com/profile.php?id=61574513770408" class="fab fa-facebook"></a></li>
                 <li><a style="font-size: 1.3vw;" href="https://www.instagram.com/mklegacy_/" class="fab fa-instagram"></a></li>
-                <li><a style="font-size: 1.3vw" href="https://www.youtube.com/embed/i-dw1dnXHUI?si=5Ghl0gzJvlgbJ27C" class="fab fa-youtube"></a></li>
+                <li><a style="font-size: 1.3vw" href="https://www.youtube.com/@mklegacyband" class="fab fa-youtube"></a></li>
             </ul>
         </div>
     </footer>
